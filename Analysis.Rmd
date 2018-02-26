@@ -11,6 +11,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Introduction
+The NEON (National Ecological Observatory Network) project provides scientific real time data in hopes of understanding environmental change, informing natural resource decisions, and engaging the next generations of scientists with this data. The project is responsible for measuring the causes and effects of environmental change across the United States within 20 eco-climate domains that all represent different landforms, vegetation, climate, and ecosystem dynamics. The project is constantly collecting data from it's observatory's regional domain to provide data and statistically represent ecological, physical, and biological variability across the US (NEON data website). 
+
+NEON has four different sites that the project collects data from that will be introduced in this project, these sites include: core terrestrial sites, core aquatic sites, relocatable terrestrial sites, and lastly relocatable aquatic sites (NEON data website).In this analysis we will specifically be looking at: the Barlett Experimental Forest (relocatable terrestrial), Guanica Forest Common Wealth of Puerto Rico (core terrestrial), Harvard University Forest (core terrestrial), Santa Rita Experimental Range University of Arizona (core terrestrial), Steigerwaldt Land Services (relocatable terrestrial), Treehaven University of Wisconsin (relocatable terrestrial), and University of Notre Dame Environmental Research Center (core terrestrial).
+
+
+In addition to vegetation 
 
 Delete this text, and add 3-4 paragraphs of introduction. This should include background on the NEON project, the sets of sites you are comparing, and the focal site you select for focused temporal analysis.
 
@@ -28,7 +34,7 @@ literfall_data <- read.csv("data/ltr_massdata.csv",
 
 Data Set showing the dry mass of Branches and Twigs at NEON sites:
 ```{r subset-out-twigs/branches-data}
-# just look at twigs and branches
+# just look at twigs and branches dry mass
 branches_data <- subset(literfall_data, 
                         functionalGroup == "Twigs/branches")
 ```
@@ -41,7 +47,7 @@ STEI_branches_data <- subset(branches_data,
 
 Scatter plot of the Branches/Twigs mass at STEI NEON site:
 ```{r scatterplot-for-STEI-site}
-# make a scatterplot of branches and twigs litter at the STEI NEON site
+# make a scatterplot of branches and twigs dry mass at the STEI NEON site
 pdf("output/STEI_branches_mass_over_time_scatterplot.pdf")
 plot(x = as.POSIXct(STEI_branches_data$collectDate),
     y = STEI_branches_data$dryMass,
