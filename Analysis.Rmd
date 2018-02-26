@@ -15,10 +15,9 @@ The NEON (National Ecological Observatory Network) project provides scientific r
 
 NEON has four different sites that the project collects data from that will be introduced in this project, these sites include: core terrestrial sites, core aquatic sites, relocatable terrestrial sites, and lastly relocatable aquatic sites (NEON data website).In this analysis we will specifically be looking at: the Barlett Experimental Forest (relocatable terrestrial), Guanica Forest Common Wealth of Puerto Rico (core terrestrial), Harvard University Forest (core terrestrial), Santa Rita Experimental Range University of Arizona (core terrestrial), Steigerwaldt Land Services (relocatable terrestrial), Treehaven University of Wisconsin (relocatable terrestrial), and University of Notre Dame Environmental Research Center (core terrestrial).
 
+The site I will specifically be focused on for this project is the "STEI" site, other wise known as Steigerwaldt Land Services. This site is a relocatable terrestrial site located near the Great Lakes in Tomahawk, Wisconsin. It is approxamitely located 1 mile north of NEONs other Treehaven site. Steigerwaldt has a specific vegetation consisting of the most abundant tree species with young, even aged stand such as: aspen (Populus tremuloides), red maple (Acer rubrum), and balsam fir (Abies balsamea). The stand was cut in 2005 and was scattered with oak and hemlock and roads were planted with clover for wildlife food for deer and ruffed grouse. 
 
-In addition to vegetation 
-
-Delete this text, and add 3-4 paragraphs of introduction. This should include background on the NEON project, the sets of sites you are comparing, and the focal site you select for focused temporal analysis.
+In addition to vegetation the area has a disinguishable climate. "STEI" has endured salvage timber projects following ice and hail damage, windstorms, tornadoes, and spruce decline. Steigerwaldt is typically faces a humid continental climate and experiences no dry seasons and warm summers from mid-May to mid-September with average temperatures in July around 79 F. Contrastingly the site faces winters lasting from Novemeber to March with temperature arounds 4 F in January. The sites annual average temperature is 41.6 F.  
 
 # Methods
 
