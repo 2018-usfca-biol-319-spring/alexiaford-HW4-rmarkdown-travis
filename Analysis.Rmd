@@ -41,7 +41,7 @@ branches_data <- subset(literfall_data,
 
 ```{r subset-out-STEI-twigs/branches-data}
 #just look at the "STEI" neon site
-STEI_branches_data <- subset(branches_data,
+stei_branches_data <- subset(branches_data,
                     siteID == "STEI")
 ```
 
