@@ -55,7 +55,6 @@ plot(x = as.POSIXct(STEI_branches_data$collectDate),
     xlab = "Date",
     ylab = "Dry mass of banches in grams",
     pch = 16)
-dev.off()
 ```
 
 Box plot of the dry mass of Branches and Twigs at varying NEON sites:
