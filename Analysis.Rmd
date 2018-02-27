@@ -60,6 +60,16 @@ plot(x = as.POSIXct(STEI_branches_data$collectDate),
 dev.off()
 ```
 
+Box plot of the dry mass of Branches and Twigs at varying NEON sites:
+```{r boxplot-of-functional-types}
+# mass of twigs and branches at diffrent sites in the NEON data
+boxplot(dryMass ~ siteID,
+        data = branches_data,
+        main = "Mass of Branches at NEON sites",
+        xlab = "site ID",
+        ylab = "dryMass (grams)")
+```
+
 ```{r install-lintr}
 install.packages("devtools")
 devtools::install_github("jimhester/lintr")
