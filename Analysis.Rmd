@@ -48,7 +48,6 @@ STEI_branches_data <- subset(branches_data,
 Scatter plot of the Branches/Twigs mass at STEI NEON site:
 ```{r scatterplot-for-STEI-site}
 # make a scatterplot of branches and twigs dry mass at the STEI NEON site
-pdf("output/STEI_branches_mass_over_time_scatterplot.pdf")
 plot(x = as.POSIXct(STEI_branches_data$collectDate),
     y = STEI_branches_data$dryMass,
     main = "Dry mass of branches fallen in Steigerwaldt Land Service",
