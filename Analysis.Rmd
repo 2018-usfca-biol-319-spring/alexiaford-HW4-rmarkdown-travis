@@ -35,7 +35,7 @@ literfall_data <- read.csv("data/ltr_massdata.csv",
 Data Set showing the dry mass of Branches and Twigs at NEON sites:
 ```{r subset-out-twigs/branches-data}
 # just look at twigs and branches dry mass
-branches_data <- subset(literfall_data, 
+branches_data <- subset(literfall_data,
                         functionalGroup == "Twigs/branches")
 ```
 
@@ -71,6 +71,15 @@ anova(lm(dryMass ~ siteID,
 **Chi-square test**
 ANOVA p-value: 0.04545
 This number shows there are some similarities but not all of the sites have similarities, this is most likely the case as the majority of the dry mass data for the sites is between 0 and 400 grams, but there is one outlier showing a mass of 1200 grams, somewhat skewing the p-value as the majority of the dry mass for each site is extremely similar. 
+
+```{r install-lintr}
+install.packages("devtools")
+devtools::install_github("jimhester/lintr")
+```
+
+```{r check code}
+lintr::lint(filename = "Analysis.Rmd")
+```
 
 # Discussion
 In analyzing the box plot, it shows that the majority of the data is extremely similar as most of the dry mass for each site is somewhere between 300-400 grams of fallen branches and twigs, with no distinguishable higher regions of litter mass. The "SRER" site displays the smallest amount of litter mass of twigs and branches with very few data even above 0 grams. This may be the smallest amount of litter mass as the "SRER" site is at the University of Arizona in which the dominant vegetation is a mix of short trees, shrubs, cacti, and other succulents. With this being the case, the site would have less branches and twigs to fall as the other sites as it is typically shrubs and cacti rather than large trees like some sites. The "STEI" site and the "SRER" site are the only sites that do not have somewhat similar data with smaller amounts of litter mass, under about 300 grams. Where the "STEI" site and "SRER" site differ is in their outliers. The "STEI" site shows one individual outlier at 1200 grams, while all the other sites including "SRER" display no visible outliers let alone any data above 400 grams. The "STEI" site possibly displays an outlier because it is in Wisconsin and it's climate has cold winters with potential ice and snow storms resulting in more fallen branches/twigs. This site is also a lot newer as the land houses young and even-aged stand where as sites like "SRER" would have little to no outliers with active and longer accurate results.
