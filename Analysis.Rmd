@@ -22,9 +22,7 @@ In addition to vegetation the area has a distinguishable climate. "STEI" has end
 # Methods
 The NEON observatory collects from a total of 81 fields sites, 47 of them are terrestrial sites and 34 are aquatic sites. Data is collected using "in situ" measurements, field sampling, and airborne remote censoring. The NEON project follows a protocol for each site in which they set up a 3m X 0.5m rectangular ground trap that collects differing dry masses from flowers to twigs and branches. 
 
-R studio has been used in this report to analyze data provided from NEON's observatory, by specifically sub-setting out the the twigs and branches from the litterfall data and analyzing the differences in the dry mass of trees and branches found at each of the sites being observed using a box plot. ANOVA was used in R studio to take the varying sites dry mass of branches in order to analyze the significant differences in the sites. 
-
-Describe briefly where the data came from, including how they were collected in the field (information is in the pdf file in the data folder), and how you are analyzing them (e.g. using R to visualize the results and an ANOVA to test for significant differences).
+R studio has been used in this report to analyze data provided from NEON's observatory, by specifically sub-setting out the the twigs and branches from the litterfall data and analyzing the differences in the dry mass of trees and branches found at each of the sites being observed using a box plot. Additionally, a scatterplot was used to analyze dry mass of banches and twigs at just one site, The Steigerwaldt Land Services. ANOVA was used in R studio to take the varying sites dry mass of branches in order to analyze the significant differences in the sites. 
 
 # Results
 Read in Litterfall data set:
@@ -68,7 +66,13 @@ boxplot(dryMass ~ siteID,
         main = "Mass of Branches at NEON sites",
         xlab = "site ID",
         ylab = "dryMass (grams)")
+#r statistical test
+anova(lm(dryMass ~ siteID,
+         data = branches_data))
 ```
+**Chi-square test**
+ANOVA p-value: 0.04545
+This number shows there are some similarities but not all of the sites have similarities, this is most likely the case as the majority of the dry mass data for the sites is between 0 and 400 grams, but there is one outlier showing a mass of 1200 grams, somewhat skewing the p-value as the majority of the dry mass for each site is extremely similar. 
 
 ```{r install-lintr}
 install.packages("devtools")
